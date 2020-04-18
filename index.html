@@ -23,6 +23,7 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="images/title.png">
 
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
 	
@@ -49,12 +50,58 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	<style>
-
 		a :active {
 			color: green;
 		}
 		a {
 			color:#4c9900;
+		}
+  		#rotating-large{
+    		border: 1rem solid #4c9900;
+			width:25.0rem;
+			height:25.0rem;
+			margin:2.0rem auto;
+			animation: rescale 8s infinite;
+			position: relative;
+			top: 10.0rem;
+			z-index: 2;
+			border-radius: .7rem;
+		}
+		#rotating-small{
+			border-radius: 1rem;
+			position: relative;
+			top: 0.5rem;
+			left: 0.5rem;
+			z-index: 1;
+			border: 1rem solid #e5ffcc;
+			width: 22.0rem;
+			height: 22.0rem;
+			animation: antirotation 4s infinite;
+		}
+		.logo{
+			top: -11rem;
+			font-size: 7.0rem;
+			position: relative;
+			display: block;
+			z-index: 3;
+			bottom: 4rem;
+			text-align:center;
+			font-family: 'Pacifico', cursive;
+			color: black;
+		}
+		@keyframes rescale{
+			0% {
+			transform:rotate(0deg);
+			}100%
+			{transform:rotate(360deg);
+			}
+		}
+		@keyframes antirotation{
+			0% {
+			transform:rotate(0deg);
+			}100%
+			{transform:rotate(-360deg);
+			}
 		}
 	</style>
 
@@ -67,7 +114,7 @@
 			<div class="text-center">
 				<div class="author-img" style="background-image: url(images/about.png);"></div>
 				<h1 id="colorlib-logo"><a href="index.html">Peter Wang</a></h1>
-				<span class="position"><a href="#">UI/UX/Designer</a> in China</span>
+				<span class="position">Student, Engineer, Researcher</span>
 			</div>
 			<nav id="colorlib-main-menu" role="navigation" class="navbar">
 				<div id="navbar" class="collapse">
@@ -100,7 +147,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</aside>
 
 		<div id="colorlib-main">
-			<section id="colorlib-hero" class="js-fullheight" data-section="home">
+			<!--<section id="colorlib-hero" class="js-fullheight" data-section="home">
 				<div class="flexslider js-fullheight">
 					<ul class="slides">
 				   	<li style="background-image: url(images/img_bg_1.jpg);">
@@ -112,7 +159,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					   					<div class="desc">
 						   					<h1 style="color:white">Hi! <br>I'm Peter</h1>
 						   					<h2 style="color:white"><b><a href="https://colorlib.com/" style="color:white" target="_blank">pwang649@usc.edu</a> - Los Angeles, CA</b></h2>
-												<!--<p><a class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>-->
+												<<p><a class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>
 											</div>
 					   				</div>
 					   			</div>
@@ -128,7 +175,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					   					<div class="desc">
 						   					<h1 style="color:white">I am <br>a Leaner</h1>
 												<h2 style="color:white"><b><a href="https://colorlib.com/" style="color:white" target="_blank">pwang649@usc.edu</a> - Los Angeles, CA</b></h2>
-												<!--<p><a class="btn btn-primary btn-learn">View Portfolio <i class="icon-briefcase3"></i></a></p>-->
+												<p><a class="btn btn-primary btn-learn">View Portfolio <i class="icon-briefcase3"></i></a></p>
 											</div>
 					   				</div>
 					   			</div>
@@ -137,6 +184,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				   	</li>
 				  	</ul>
 			  	</div>
+			</section>-->
+			<section data-section="home">
+				<div id="rotating-large">
+					<div id="rotating-small">
+				  	</div>
+				</div>
+			  	<h class="logo">PW</h>
 			</section>
 
 			<section class="colorlib-about" data-section="about">
@@ -146,9 +200,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 								<div class="col-md-12">
 									<div class="about-desc">
-										<span class="heading-meta">About Us</span>
+										<span class="heading-meta">About Me</span>
 										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p><strong>Hi I'm Peter Wang</strong> I am a freshman at USC studying Computer Science and Applied Math. I am passionate about machine learning, data analytics, and full stack web development.</p>
+										<p><strong>Hi I'm Peter Wang</strong> I am a freshman at USC studying Computer Science and Applied Math. I am passionate about machine learning, robotics, data analytics, and full stack web development.</p>
 									</div>
 								</div>
 							</div>
@@ -156,25 +210,25 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
 									<div class="services color-1">
 										<span class="icon2"><i class="icon-bulb"></i></span>
-										<h3>Graphic Design</h3>
+										<h3>M. Learning</h3>
 									</div>
 								</div>
 								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
 									<div class="services color-2">
-										<span class="icon2"><i class="icon-globe-outline"></i></span>
-										<h3>Web Design</h3>
+										<span class="icon2"><i class="icon-steam"></i></span>
+										<h3>Robotics</h3>
 									</div>
 								</div>
 								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
 									<div class="services color-3">
 										<span class="icon2"><i class="icon-data"></i></span>
-										<h3>Software</h3>
+										<h3>Data</h3>
 									</div>
 								</div>
 								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
 									<div class="services color-4">
 										<span class="icon2"><i class="icon-phone3"></i></span>
-										<h3>Application</h3>
+										<h3>Web App</h3>
 									</div>
 								</div>
 							</div>
@@ -224,13 +278,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									    </div>
 									</div>-->
 									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingTwo">
+									    <div class="panel-heading" role="tab" id="headingOne">
 									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">University of Southern California <span style="float: right; margin-right: 20px;">2020-2024</span>
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">University of Southern California <span style="float: right; margin-right: 20px;">2020-2024</span>
 									            </a>
 									        </h4>
 									    </div>
-									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 									        <div class="panel-body">
 													<ul>
 														<li>B.S. CS and Applied Math (Double Major)</li>
@@ -241,35 +295,76 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									    </div>
 									</div>
 									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingThree">
+									    <div class="panel-heading" role="tab" id="headingTwo">
 									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Diploma in Computer Science
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Major in Computer Science
 									            </a>
 									        </h4>
 									    </div>
-									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 									        <div class="panel-body">
-												<p><strong>Courses taken: </strong></p>	
+												<p><strong>Courses Taken & Plan to Take: </strong></p>	
 												<ul>
 													<li>CSCI 103 Intro to Programming</li>
-													<li>CSCI 109 Intro to Computing</li>
+													<li>CSCI 109 Intro to Computer Science</li>
+													<li>EE 109 Embedded System</li>
+													<li>CSCI 104 Data Structures & Object Oriented Design</li>
+													<li>CSCI 170 Discrete Methods</li>
+													<li>CSCI 201 Principles of Software Development</li>
+													<li>CSCI 570 Analysis of Algorithms</li>
+													<li>CSCI 310 Software Engineering</li>
+													<li>CSCI 356 Intro to Computer Systems</li>
+													<li>CSCI 350 Intro to Operating Systems</li>
+													<li>CSCI 561 Fundations of Artificial Intelligence</li>
+													<li>CSCI 545 Robotics</li>
+													<li>CSCI 567 Machine Learning</li>
+													<li>CSCI 401 Capstone: Design&Construction of Large Software Systems</li>
+													<li>CSCI 571 Web Technologies</li>
 												</ul>
 									        </div>
 									    </div>
 									</div>
 
 									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingThree">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Major in Applied & Computational Math
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+									        <div class="panel-body">
+									            <p><strong>Courses Taken & Plan to Take: </strong></p>	
+												<ul>
+													<li>MATH 225 Linear Algebra and Linear Differential Equation</li>
+													<li>MATH 407 Probability Theory</li>
+													<li>MATH 408 Mathematical Statistics</li>
+													<li>MATH 425a Fundamental Concepts of Analysis</li>
+													<li>MATH 458 Numerical Methods</li>
+													<li>MATH 432 Applied Combinatorics</li>
+													<li>MATH 467 Theory and Computational Methods for Optimization</li>
+													<li>MATH 465 Nonlinear Dynamics in Science and Engineering</li>
+												</ul>
+											</div>
+									    </div>
+									</div>
+
+									<div class="panel panel-default">
 									    <div class="panel-heading" role="tab" id="headingFour">
 									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Diploma in Applied & Computational Math
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Minor in Connected Devices and Making
 									            </a>
 									        </h4>
 									    </div>
 									    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
 									        <div class="panel-body">
-									            <p><strong>Courses taken: </strong></p>	
+									            <p><strong>Courses Taken & Plan to Take: </strong></p>	
 												<ul>
-													<li>MATH 225 Linear Algebra and Linear Differential Equation</li>
+													<li>ITP 115 Programming in Python</li>
+													<li>ITP 228 Computer-Aided Modeling for 3D Product Design</li>
+													<li>ITP 348 Intro to Physical Computing</li>
+													<li>ITP 466 Building the High Tech Startup</li>
+													<li>ITP 468 Connected Devices Project</li>
 												</ul>
 											</div>
 									    </div>
@@ -284,7 +379,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									    </div>
 									    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
 									        <div class="panel-body">
-									            <p>Robotics Lead Programmer, Academic Decathlon A-Player, National AP Scholar, Top Ten Scholar, NHS, CSF</p>	
+												<ul>
+													<li>Robotics Lead Programmer <span style="float: right;">2016-2020</span></li>
+													<li>Academic Decathlon A-Player <span style="float: right;">2018-2020</span></li>
+													<li>National AP Scholar <span style="float: right;">2018-2020</span></li>
+													<li>Top Ten Scholar <span style="float: right;">2019-2020</span></li>
+													<li>National Honors Society <span style="float: right;">2016-2020</span></li>
+													<li>California Scholarship Federation <span style="float: right;">2016-2020</span></li>
+												</ul>	
 									        </div>
 									    </div>
 									</div>
@@ -314,8 +416,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					               </div>
 
 					               <div class="timeline-label">
-					                  <h2><a href="#">Full Stack Developer</a> <span>2017-2018</span></h2>
-					                  <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.</p>
+					                  <h2><a href="#">Ivy Maker Tech Assistant</a> <span>7/2019 - Present</span></h2>
+					                  <ul>
+										  <li>Explored automatic driving technologies with donkey car via DIY Robocars in China.</li>
+										  <li>Mentored an FTC robotics team both remotely and face to face with basic robot coding, control theories, and vision processing to equip them for competitions.</li>
+									  </ul>
 					               </div>
 					            </div>
 					         </article>
@@ -327,9 +432,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					                  <i class="icon-pen2"></i>
 					               </div>
 					               <div class="timeline-label">
-					               	<h2><a href="#">Front End Developer at Google Company</a> <span>2017-2018</span></h2>
-					                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-					               </div>
+									<h2><a href="#">Stanford Machine Learning Research Assistant</a> <span>7/2018 - 8/2018</span></h2>
+									<ul>
+										<li>Learned to use machine learning to handle classification based on incomplete data and cooperated with others to construct the final project.</li>
+										<li>In charge of programming the interface and plotting the tree-chart from given data using R language.</li>
+									</ul>
+								 </div>
 					            </div>
 					         </article>
 
@@ -339,9 +447,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					                  <i class="icon-pen2"></i>
 					               </div>
 					               <div class="timeline-label">
-					               	<h2><a href="#">System Analyst</a> <span>2017-2018</span></h2>
-					                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-					               </div>
+										<h2><a href="#">NHU IT Department Intern</a> <span>6/2017 - 7/2017</span></h2>
+										<ul>
+											<li>Participated in the IT Department to learn how information and finances are processed using the SAP/ERP system.</li>
+											<li>Visited several medicine factories to see how medicines are made and packaged in a factory line.</li>
+											<li>Grasped a significant amount of knowledge with the warehouse management system that controls the location and transportation of products in the warehouse.</li>
+										</ul>
+									</div>
 					            </div>
 					         </article>
 
@@ -351,13 +463,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					                  <i class="icon-pen2"></i>
 					               </div>
 					               <div class="timeline-label">
-					               	<h2><a href="#">Creative Designer</a> <span>2017-2018</span></h2>
-					                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+					               	<h2><a href="#">FRC Robotics Team 2659 Lead Programmer</a> <span>2016-2020</span></h2>
+									  <ul>
+										  <Li>Self-active learner. Learned advanced control theories, such as PID loops, motion profiling, nonlinear feedback control, etc., to push the limit of robot coding.</Li>
+										  <li>Grasped advanced engineering knowledges such as design using Onshape, industrial machine operations, electronics wiring.</li>
+										  <li>Serve as the team’s lead programmer who was in charge of coding of the robots and teaching others.</li>
+									  </ul>			  
 					               </div>
 					            </div>
 					         </article>
 
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					         <!--<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
 					            <div class="timeline-entry-inner">
 					               <div class="timeline-icon color-5">
 					                  <i class="icon-pen2"></i>
@@ -367,7 +483,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
 					               </div>
 					            </div>
-					         </article>
+					         </article>-->
 
 					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
 					            <div class="timeline-entry-inner">
@@ -399,7 +515,97 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							<div class="project" style="background-image: url(images/img-1.jpg);">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="work.html">Work 01</a></h3>
+										<h3><a href="https://www.youtube.com/watch?v=LFYTAqHOYcg">ROS Personal Lidar Robot</a></h3>
+										<span>ROS + SLAM</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(images/img-2.png);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="https://github.com/wangqian1207/trash_can_control">Mobile Self-sorting Trash Can</a></h3>
+										<span>Device</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="project" style="background-image: url(images/img-3.png);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="https://github.com/wangqian1207/data_training_project">Data Classifier</a></h3>
+										<span>Machine Learning</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
+							<div class="project" style="background-image: url(images/img-4.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="https://github.com/FRCTeam2659/frc2020">"Phoenix", 2020 Robot</a></h3>
+										<span>Robotics</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+							<div class="project" style="background-image: url(images/img-5.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="https://github.com/FRCTeam2659/frc2019">"Backlash", 2019 Robot</a></h3>
+										<span>Robotics</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(images/img-6.jpg);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="https://github.com/FRCTeam2659/2018-inseason">"Chad", 2018 Robot</a></h3>
+										<span>Robotics</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="project" style="background-image: url(images/img-7.png);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="www.team2659.com">Website for My Robotics Team</a></h3>
 										<span>Website</span>
 										<p class="icon">
 											<span><a href="#"><i class="icon-share3"></i></a></span>
@@ -411,71 +617,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							</div>
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="project" style="background-image: url(images/img-2.jpg);">
+							<div class="project" style="background-image: url(images/img-8.jpg);">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="work.html">Work 02</a></h3>
-										<span>Animation</span>
-										<p class="icon">
-											<span><a href="#"><i class="icon-share3"></i></a></span>
-											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-							<div class="project" style="background-image: url(images/img-3.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="work.html">Work 03</a></h3>
-										<span>Illustration</span>
-										<p class="icon">
-											<span><a href="#"><i class="icon-share3"></i></a></span>
-											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-							<div class="project" style="background-image: url(images/img-4.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="work.html">Work 04</a></h3>
-										<span>Application</span>
-										<p class="icon">
-											<span><a href="#"><i class="icon-share3"></i></a></span>
-											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/img-5.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="work.html">Work 05</a></h3>
-										<span>Graphic, Logo</span>
-										<p class="icon">
-											<span><a href="#"><i class="icon-share3"></i></a></span>
-											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="project" style="background-image: url(images/img-6.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="work.html">Work 06</a></h3>
-										<span>Web Design</span>
+										<h3><a href="http://umji.sjtu.edu.cn/news/ji-and-robotterra-cosponsor-a-robotic-contest/">RoboTerra Robocamp Project</a></h3>
+										<span>Robotics</span>
 										<p class="icon">
 											<span><a href="#"><i class="icon-share3"></i></a></span>
 											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
@@ -580,19 +726,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					</div>
 					<div class="row">
 						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="309" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Cups of coffee</span>
+							<span class="colorlib-counter js-counter" data-from="0" data-to="8" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Cups of Water a Day</span>
 						</div>
 						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="356" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter js-counter" data-from="0" data-to="8" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Hours of Sleep per Day</span>
+						</div>
+						<div class="col-md-3 text-center animate-box">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="8" data-speed="5000" data-refresh-interval="50"></span>
 							<span class="colorlib-counter-label">Projects</span>
 						</div>
 						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="30" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Clients</span>
-						</div>
-						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="10" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter js-counter" data-from="0" data-to="8" data-speed="5000" data-refresh-interval="50"></span>
 							<span class="colorlib-counter-label">Partners</span>
 						</div>
 					</div>
@@ -609,70 +755,70 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					</div>
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+							<p>Programming Languages and Tools</p>
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 							<div class="progress-wrap">
-								<h3>Photoshop</h3>
+								<h3>Java</h3>
 								<div class="progress">
 								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
-								    <span>75%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>jQuery</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="60"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:60%">
-								    <span>60%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>HTML5</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="85"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
-								    <span>85%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>CSS3</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>WordPress</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
-								    <span>70%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>SEO</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
 								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
 								    <span>80%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3>Web: html/css/JavaScript/PHP</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="60"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
+								    <span>80%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3>Machine Learning</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="85"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:30%">
+								    <span>30%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3>Robotics</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:50%">
+								    <span>50%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+								<h3>CAD</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:30%">
+								    <span>30%</span>
+								  	</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="progress-wrap">
+								<h3>Work Ethics</h3>
+								<div class="progress">
+								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:100%">
+								    <span>100%</span>
 								  	</div>
 								</div>
 							</div>
