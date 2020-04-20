@@ -135,7 +135,7 @@
 			<div class="colorlib-footer">
 				<p><small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> <span>Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash.com</a></span></small></p>
+
 				<ul>
 					<li><a href="#"><i class="icon-facebook2"></i></a></li>
 					<li><a href="#"><i class="icon-twitter2"></i></a></li>
@@ -892,7 +892,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 									<i class="icon-globe-outline" style="background-color: #e5ffcc; color:#4c9900;"></i>
 								</div>
 								<div class="colorlib-text">
-									<p><a href="#">pwang649@usc.edu</a></p>
+									<p><a href="mailto:BAHSTeam2659@gmail.com">pwang649@usc.edu</a></p>
 								</div>
 							</div>
 
@@ -917,21 +917,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						<div class="col-md-7 col-md-push-1">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-									<form action="">
+									<form name="contactform" method="post" action="send.php">
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
+											<input class="form-control" name="name" placeholder="Name" type="text" required>
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Email">
+											<input class="form-control" name="email" placeholder="Email" type="email" required>
 										</div>
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Subject">
+											<input class="form-control" name="subject" placeholder="Subject" type="text" required>
 										</div>
 										<div class="form-group">
 											<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 										</div>
 										<div class="form-group">
-											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
+											<input type="submit" name="submit" class="btn btn-primary btn-send-message" value="Send Message">
 										</div>
 									</form>
 								</div>
